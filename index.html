@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | NFT preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap');
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        body {
+            background-color: hsl(217, 54%, 11%);
+        }
+        
+        .__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        .__outercontainer {
+            display: flex;
+            background-color: hsla(215, 48%, 10%, 0.39);
+            width: 22rem;
+            height: 35rem;
+            border-radius: 2rem;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .__innercontainer {
+            background-color: hsl(216, 50%, 16%);
+            width: 18rem;
+            height: 30rem;
+            border-radius: 1rem;
+        }
+        
+        .__innermostcontainer {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            margin-top: 1rem;
+            align-items: center;
+            background-position: center;
+        }
+        
+        img {
+            width: 16rem;
+            height: 16rem;
+            border-radius: 0.5rem;
+        }
+        
+        .nftname {
+            font-size: 1.2rem;
+            font-family: 'Outfit', sans-serif;
+            color: white;
+            margin-top: 1rem;
+            margin-left: 1rem;
+            align-self: flex-start;
+        }
+        
+        .nftinfo {
+            font-size: 0.8rem;
+            font-family: 'Outfit', sans-serif;
+            color: hsl(215, 51%, 70%);
+            margin-top: 1rem;
+            margin-left: 1rem;
+            align-self: flex-start;
+        }
+        
+        .__ctn {
+            display: flex;
+            margin-top: 1.2rem;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+        
+        .__ethctn {
+            display: flex;
+            margin-left: 1rem;
+        }
+        
+        .__cdnctn {
+            display: flex;
+            margin-right: 1rem;
+        }
+        
+        .ETH {
+            display: flex;
+            font-size: 0.9rem;
+            color: hsl(178, 100%, 50%);
+            font-family: 'Outfit', sans-serif;
+            margin-left: 0.3rem;
+        }
+        
+        .countdown {
+            display: flex;
+            font-size: 0.7rem;
+            color: hsl(215, 51%, 70%);
+            font-family: 'Outfit', sans-serif;
+            margin-left: 0.3rem;
+            align-self: center;
+        }
+        
+        .divider {
+            display: flex;
+            margin-top: 1rem;
+            width: 100%;
+            justify-content: center;
+        }
+        
+        hr {
+            width: 90%;
+            height: 1px;
+            background-color: hsl(215, 32%, 27%);
+            border: none;
+        }
+        
+        .__nftauthor {
+            display: flex;
+            flex-direction: row;
+            margin-top: 1rem;
+            width: 100%;
+            margin-left: 2rem;
+        }
+        
+        #nftauthor {
+            width: 1.5rem;
+            height: 1.5rem;
+            border: solid 1px hsl(0, 0%, 99%);
+            border-radius: 50%;
+        }
+        
+        .credits {
+            font-size: 0.8rem;
+            color: hsl(215, 51%, 70%);
+            font-family: 'Outfit', sans-serif;
+            margin-left: 1rem;
+            align-self: center;
+        }
+        
+        span {
+            color: hsl(0, 0%, 100%)
+        }
+    </style>
+</head>
+
+<body>
+    <div class=__container>
+        <div class="__outercontainer">
+            <div class="__innercontainer">
+                <div class="__innermostcontainer">
+                    <img src="images/image-equilibrium.jpg">
+                    <h1 class="nftname">Equilibrium #3429</h1>
+                    <p class="nftinfo">Our Equilibrium collection promotes balance and calm</p>
+                    <div class="__ctn">
+                        <div class="__ethctn">
+                            <svg width="11" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z" fill="#00FFF8"/></svg>
+                            <h1 class="ETH">0.041 ETH</h1>
+                        </div>
+                        <div class="__cdnctn">
+                            <svg width="17" height="17" xmlns="http://www.w3.org/2000/svg"><path d="M8.305 2.007a6.667 6.667 0 1 0 0 13.334 6.667 6.667 0 0 0 0-13.334Zm2.667 7.334H8.305a.667.667 0 0 1-.667-.667V6.007a.667.667 0 0 1 1.334 0v2h2a.667.667 0 0 1 0 1.334Z" fill="#8BACD9"/></svg>
+                            <h1 class="countdown">3 days left</h1>
+                        </div>
+                    </div>
+                    <div class="divider">
+                        <hr>
+                    </div>
+                    <div class="__nftauthor">
+                        <img id="nftauthor" src="images/image-avatar.png">
+                        <p class="credits">Creation of <span>Jules Wyvern</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
